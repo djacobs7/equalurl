@@ -7,5 +7,5 @@
 	That URL was already the perfect length.  No need to use an EqualURL.  Try a URL that is longer next time. 
 	<a href='/'>Choose a different URL</a> 
 	
-	That url is <%= @attempted_url.size -%> characters long. Minimum length is <%= SiteController::SITE_URL.size + 1 %>
+	That url is <%=h @attempted_url.size -%> characters long. Minimum length is <%=h SiteController::SITE_URL.size + 1 %>
 </div>

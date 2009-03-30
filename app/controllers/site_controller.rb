@@ -1,9 +1,11 @@
 class SiteController < ApplicationController
   
+  require 'cgi'
+  
   SITE_URL = 'http://equalurl.com/'
   
   def create_new_link
-    url = params[:url]
+    url = (params[:url])
     url = formalize_url(url)
     if url.size < (SITE_URL.size + 1)
       url = url_with_www(url)
@@ -45,9 +47,9 @@ class SiteController < ApplicationController
     def generate_url(url)
       raise 'too short' if url.size < (SITE_URL.size + 1)
       
-      existing_key = CACHE.get("existing_link_#{url}")
+      existing_key = CACHE.get( CGI::escape( "existing_link_#{url}") )
       if existing_key
-        CACHE.set( existing_key, url )
+        CACHE.set( existing_key, CGI::escape(url) )
         return existing_key
       end
       
@@ -63,8 +65,9 @@ class SiteController < ApplicationController
         logger.debug "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~I just had a collision with #{random_string}, which already existed as it turns out...~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       end
       
-      CACHE.set( random_string, url )
-      CACHE.set( "existing_link_#{url}", random_string )
+      
+      CACHE.set( random_string, CGI::escape(url) )
+      CACHE.set( CGI::escape( "existing_link_#{url}" ), random_string )
       random_string
     end
     

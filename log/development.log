@@ -460,3 +460,249 @@ Processing SiteController#too_short (for 127.0.0.1 at 2009-03-29 22:07:20) [GET]
   Parameters: {"attempted_url"=>"<a href=\"/../\"/>"}
 Rendering site/too_short
 Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/too_short?attempted_url=%3Ca%20href=%22/../%22/%3E]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (11.8ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 23:28:15) [POST]
+  Parameters: {"url"=>"fwefwef"}
+Redirected to http://localhost:4001/too_short?attempted_url=http://www.fwefwef
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#too_short (for 127.0.0.1 at 2009-03-29 23:28:15) [GET]
+  Parameters: {"attempted_url"=>"http://www.fwefwef"}
+Rendering template within layouts/application
+Rendering site/too_short
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/too_short?attempted_url=http://www.fwefwef]
+
+
+Processing SiteController#too_short (for 127.0.0.1 at 2009-03-29 23:28:22) [GET]
+  Parameters: {"attempted_url"=>"http://www.fwefwef"}
+Rendering template within layouts/application
+Rendering site/too_short
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/too_short?attempted_url=http://www.fwefwef]
+
+
+Processing SiteController#too_short (for 127.0.0.1 at 2009-03-29 23:28:23) [GET]
+  Parameters: {"attempted_url"=>"http://www.fwefwef"}
+Rendering template within layouts/application
+Rendering site/too_short
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/too_short?attempted_url=http://www.fwefwef]
+
+
+Processing SiteController#too_short (for 127.0.0.1 at 2009-03-29 23:28:24) [GET]
+  Parameters: {"attempted_url"=>"http://www.fwefwef"}
+Rendering template within layouts/application
+Rendering site/too_short
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/too_short?attempted_url=http://www.fwefwef]
+
+
+Processing SiteController#too_short (for 127.0.0.1 at 2009-03-29 23:28:24) [GET]
+  Parameters: {"attempted_url"=>"http://www.fwefwef"}
+Rendering template within layouts/application
+Rendering site/too_short
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/too_short?attempted_url=http://www.fwefwef]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 23:28:27) [POST]
+  Parameters: {"url"=>"fwefwef"}
+Redirected to http://localhost:4001/too_short?attempted_url=http://www.fwefwef
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#too_short (for 127.0.0.1 at 2009-03-29 23:28:27) [GET]
+  Parameters: {"attempted_url"=>"http://www.fwefwef"}
+Rendering template within layouts/application
+Rendering site/too_short
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/too_short?attempted_url=http://www.fwefwef]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 23:28:30) [POST]
+  Parameters: {"url"=>"fwefwefdsaf"}
+Redirected to http://localhost:4001/show/s7
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 23:28:30) [GET]
+  Parameters: {"key"=>"s7"}
+Rendering template within layouts/application
+Rendering site/show
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/show/s7]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 23:28:34) [POST]
+  Parameters: {"url"=>"fwefwefdsafddqwd"}
+Redirected to http://localhost:4001/show/GCZ
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 23:28:34) [GET]
+  Parameters: {"key"=>"GCZ"}
+Rendering template within layouts/application
+Rendering site/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/show/GCZ]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 23:45:01) [POST]
+  Parameters: {"url"=>""}
+Redirected to http://localhost:4001/too_short?attempted_url=http://www.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#too_short (for 127.0.0.1 at 2009-03-29 23:45:01) [GET]
+  Parameters: {"attempted_url"=>"http://www."}
+Rendering template within layouts/application
+Rendering site/too_short
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/too_short?attempted_url=http://www.]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 23:46:40) [POST]
+  Parameters: {"url"=>"<%= self.method %>"}
+
+NoMethodError (undefined method `parametrize' for "<%= self.method %>":String):
+  app/controllers/site_controller.rb:6:in `create_new_link'
+
+Rendered rescues/_trace (33.3ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 23:49:21) [POST]
+  Parameters: {"url"=>"fwqefwffqwefqwef"}
+Redirected to http://localhost:4001/show/LtQ
+Completed in 136ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 23:49:22) [GET]
+  Parameters: {"key"=>"LtQ"}
+Rendering template within layouts/application
+Rendering site/show
+Completed in 71ms (View: 68, DB: 0) | 200 OK [http://localhost/show/LtQ]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 23:49:35) [POST]
+  Parameters: {"url"=>"<%= self.method %>"}
+Redirected to http://localhost:4001/show/fr
+Completed in 6ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 23:49:35) [GET]
+  Parameters: {"key"=>"fr"}
+Rendering template within layouts/application
+Rendering site/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/show/fr]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 23:50:00) [POST]
+  Parameters: {"url"=>"http://www.google.com"}
+Redirected to http://localhost:4001/show/oLKykK
+Completed in 6ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 23:50:01) [GET]
+  Parameters: {"key"=>"oLKykK"}
+Rendering template within layouts/application
+Rendering site/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/show/oLKykK]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 23:53:40) [POST]
+  Parameters: {"url"=>"fasdfasdf"}
+Redirected to http://localhost:4001/too_short?attempted_url=http://www.fasdfasdf
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#too_short (for 127.0.0.1 at 2009-03-29 23:53:40) [GET]
+  Parameters: {"attempted_url"=>"http://www.fasdfasdf"}
+Rendering template within layouts/application
+Rendering site/too_short
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/too_short?attempted_url=http://www.fasdfasdf]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 23:53:48) [POST]
+  Parameters: {"url"=>"<%= self.method %>"}
+Redirected to http://localhost:4001/show/bwoRraOU3bb2HQh
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 23:53:48) [GET]
+  Parameters: {"key"=>"bwoRraOU3bb2HQh"}
+Rendering template within layouts/application
+Rendering site/show
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/show/bwoRraOU3bb2HQh]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 23:54:12) [POST]
+  Parameters: {"url"=>"http://www.google.com"}
+Redirected to http://localhost:4001/show/Lnd9KQGltpnDea
+Completed in 6ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 23:54:12) [GET]
+  Parameters: {"key"=>"Lnd9KQGltpnDea"}
+Rendering template within layouts/application
+Rendering site/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/show/Lnd9KQGltpnDea]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 23:54:20) [POST]
+  Parameters: {"url"=>"http://www.google.com"}
+Redirected to http://localhost:4001/show/Lnd9KQGltpnDea
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 23:54:20) [GET]
+  Parameters: {"key"=>"Lnd9KQGltpnDea"}
+Rendering template within layouts/application
+Rendering site/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/show/Lnd9KQGltpnDea]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 23:54:24) [POST]
+  Parameters: {"url"=>"www.google.com"}
+Redirected to http://localhost:4001/show/1
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 23:54:24) [GET]
+  Parameters: {"key"=>"1"}
+Rendering template within layouts/application
+Rendering site/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/show/1]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 23:54:31) [POST]
+  Parameters: {"url"=>"http://www.google.com"}
+Redirected to http://localhost:4001/show/Lnd9KQGltpnDea
+Completed in 59ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 23:54:31) [GET]
+  Parameters: {"key"=>"Lnd9KQGltpnDea"}
+Rendering template within layouts/application
+Rendering site/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/show/Lnd9KQGltpnDea]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 23:54:59) [POST]
+  Parameters: {"url"=>"http://www.google.com"}
+Redirected to http://localhost:4001/show/Lnd9KQGltpnDea
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 23:54:59) [GET]
+  Parameters: {"key"=>"Lnd9KQGltpnDea"}
+Rendering template within layouts/application
+Rendering site/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/show/Lnd9KQGltpnDea]

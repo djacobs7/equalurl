@@ -3,11 +3,11 @@
 	<p>
 		<b><%=h @real_url -%></b>
 	</p>
-	has a length of <%= @real_url.size -%> characters and resulted in the following  EqualURL which has a length of <%= "#{SiteController::SITE_URL}#{@key}".size -%>:
+	has a length of <%=h @real_url.size -%> characters and resulted in the following  EqualURL which has a length of <%=h "#{SiteController::SITE_URL}#{@key}".size -%>:
 	
 	<p>
-		<b>http://equalurl.com/<%= @key -%></b><br />
-		[<a target="_blank" href="/<%= @key -%>" >Open in new window</a>]
+		<b>http://equalurl.com/<%=h @key -%></b><br />
+		[<a target="_blank" href="/<%=h @key -%>" >Open in new window</a>]
 	</p>
 	
 	<a href="/" >Make another one!</a>
