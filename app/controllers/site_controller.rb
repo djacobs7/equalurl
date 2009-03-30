@@ -5,12 +5,16 @@ class SiteController < ApplicationController
   def create_new_link
     url = params[:url]
     url = formalize_url(url)
-    begin
+    if url.size < (SITE_URL.size + 1)
+      url = url_with_www(url)
+    end
+    
+    if url.size < (SITE_URL.size + 1)
+      redirect_to "/too_short?attempted_url=#{url}"
+    else
       random_string = generate_url(url)
       CACHE.set( random_string, url )
-      redirect_to "/show/#{random_string}"
-    rescue
-      redirect_to "/too_short?attempted_url=#{url}"
+      redirect_to "/show/#{random_string}"      
     end
   end
   
@@ -47,5 +51,15 @@ class SiteController < ApplicationController
         random_string << characters.rand
       end
       random_string
+    end
+    
+    def url_with_www(url)
+      url.strip!
+      important_part = /^http:\/\/(.*)$/.match(url)[1]
+      if /^www\./.match(important_part)
+        return url
+      else
+        return "http://www.#{important_part}"
+      end
     end
 end
