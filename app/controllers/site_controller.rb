@@ -65,12 +65,15 @@ class SiteController < ApplicationController
       
       characters = ('a'..'z').to_a + ('A'..'Z').to_a + ('0'..'9').to_a
       
+      give_up_counter = 0 
       while true
         random_string = ''
         1.upto(url.size - SITE_URL.size) do
           random_string << characters.rand
         end
+        give_up_counter = give_up_counter + 1
         
+        raise 'too short' if give_up_counter > 200    #after 200 tries,  assume you will never find something that is not a collision
         break if !CACHE.get(random_string)
         logger.debug "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~I just had a collision with #{random_string}, which already existed as it turns out...~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       end
