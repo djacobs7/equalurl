@@ -1,3 +1,7 @@
 <div>
-	You tried <%=h @attempted_url %>.  That's too short.  Minimum length is <%= SiteController::SITE_URL.size + 1 %>
+	You tried to create an EqualURL for: 
+	<p>
+		<b><%=h @attempted_url %></b>
+	</p>
+	That url is <%= @attempted_url.size -%> characters long. Minimum length is <%= SiteController::SITE_URL.size + 1 %>
 </div>
