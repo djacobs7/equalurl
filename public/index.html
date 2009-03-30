@@ -5,30 +5,57 @@
 <head>
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 	<title>Equal Url</title>
-	<style>
-		#main{
-			width: 100%;
-			min-width: 400px;
-		}
-		#content{
-			width: 400px;
-			margin-top: 100px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-	</style>
+	<link href="/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="main">
+	<div id="header">
+		<a href="http://equalurl.com/"><h1>EqualURL.com</h1></a>
+		<h2>When the length of your url is just right.</h2>
+	</div>
+	
+	<div id="sidebar">
+		<a href="/">Home</a>
+		<a href="#example">Example</a>
+		<a href="http://reddit.com">Fun Stuff</a>
+		<a href="http://hugeurl.com">For Big Urls</a>
+		<a href="http://tinyurl.com">For Tiny Urls</a>
+		<a href="http://xkcd.com">Webcomics</a>
+	</div>
+	
 	<div id="content">
-		<div>
-			Enter a url to make one of the same length:
+		<h3>Welcome to EqualURL!™</h3>
+		
+		<p>
+			Are you sick of posting URLs in emails only to have it break when sent causing the recipient to have to cut and paste it back together? Then you've come to the right place. By entering in a URL in the text field below, we will create a tiny URL that will not break in email postings and never expires.
+		</p>
+		
+		<div id="new_url_box">
+			<div id="instructions">
+				Enter a url to make one of the same length:
+			</div>
+			<div>
+				<form action="/new_link" method="post">
+					<input type="text" name="url" size="30" />
+				</form>
+			</div>
 		</div>
-		<div>
-			<form action="/new_link" method="post">
-				<input type="text" name="url" size="30" />
-			</form>
-		</div>
+		
+		<h3><a name="example"/>An Example:</h3>
+		
+		<p>
+			Turn this URL:
+
+			    http://rover.ebay.com/rover/1/711-53200-19255-0/1?t
+			    ype=3&campid=5336224516&toolid=10001&customid=tiny-
+			    hp&ext=unicycle&satitle=unicycle
+
+			into this tinyURL:
+
+			    http://tinyurl.com/unicycles
+
+			Which one would you rather cut and paste into your browser? That's the power of TinyURL!
+		</p>
 	</div>
 </div>
 </body>

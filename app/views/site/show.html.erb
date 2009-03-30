@@ -1,14 +1,15 @@
-<div>
+<h3>EqualURL was created!</h3>
+	
 	The following URL:
-	<p>
+	<blockquote>
 		<b><%=h @real_url -%></b>
-	</p>
+	</blockquote>
 	has a length of <%= @real_url.size -%> characters and resulted in the following  EqualURL which has a length of <%= "#{SiteController::SITE_URL}#{@key}".size -%>:
 	
-	<p>
+	<blockquote>
 		<b>http://equalurl.com/<%= @key -%></b><br />
 		[<a target="_blank" href="/<%= @key -%>" >Open in new window</a>]
-	</p>
+	</blockquote>
 	
 	<a href="/" >Make another one!</a>
 </div>

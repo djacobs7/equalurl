@@ -5,33 +5,24 @@
 <head>
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 	<title>Equal Url</title>
-	<style>
-		#main{
-			width: 100%;
-			min-width: 400px;
-		}
-		#content{
-			width: 70%;
-			margin-top: 100px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		p b{
-			font-family: Courier;
-		}
-		p{
-			padding: 10px 20px;
-		}
-		a{
-			color: #731a7b;
-		}
-		a:visited{
-			color: #731a7b;
-		}
-	</style>
+	<link href="/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="main">
+	<div id="header">
+		<a href="http://equalurl.com/"><h1>EqualURL.com</h1></a>
+		<h2>When the length of your url is just right.</h2>
+	</div>
+	
+	<div id="sidebar">
+		<a href="/">Home</a>
+		<a href="#example">Example</a>
+		<a href="http://reddit.com">Fun Stuff</a>
+		<a href="http://hugeurl.com">For Big Urls</a>
+		<a href="http://tinyurl.com">For Tiny Urls</a>
+		<a href="http://xkcd.com">Webcomics</a>
+	</div>
+	
 	<div id="content">
 		<%= yield %>
 	</div>
