@@ -3,8 +3,11 @@
 	<p>
 		<b><%=h @attempted_url %></b>
 	</p>
-	 Try a URL that is longer next time. 
+		That url is <%=h @attempted_url.size -%> characters long. Minimum length is <%=h SiteController::SITE_URL.size + 1 %>
+		<br/>
+	
+	 Try a URL that is longer next time. <br/>
 	<a href='/'>Choose a different URL</a> 
 	
-	That url is <%=h @attempted_url.size -%> characters long. Minimum length is <%=h SiteController::SITE_URL.size + 1 %>
+
 </div>

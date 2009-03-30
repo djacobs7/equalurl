@@ -4,6 +4,10 @@ class SiteController < ApplicationController
   
   SITE_URL = 'http://equalurl.com/'
   
+  def rickroll
+    redirect_to "http://www.youtube.com/watch?v=oHg5SJYRHA0"
+  end
+  
   def create_new_link
     url = (params[:url])
     url = formalize_url(url)
@@ -93,4 +97,5 @@ class SiteController < ApplicationController
         return "http://www.#{important_part}"
       end
     end
+    
 end
