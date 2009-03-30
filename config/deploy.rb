@@ -11,7 +11,14 @@ set :deploy_to, "/home/deploy/#{application}"
 set :scm, :none
 set :deploy_via, :copy
 set :user, "deploy"
+set :copy_exclude, [".git", ".gitignore"]
 
 role :app, "ds414-ubun1.blueboxgrid.com"
 role :web, "ds414-ubun1.blueboxgrid.com"
 role :db,  "ds414-ubun1.blueboxgrid.com", :primary => true
+
+namespace :deploy do
+  task :restart do
+    run "touch #{current_path}/tmp/restart.txt"
+  end
+end
