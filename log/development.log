@@ -1,0 +1,462 @@
+
+
+Processing SiteController#index (for 127.0.0.1 at 2009-03-29 21:06:39) [GET]
+Rendering site/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/site]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2009-03-29 21:07:40) [GET]
+Rendering site/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/site]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2009-03-29 21:07:42) [GET]
+Rendering site/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/site]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 21:07:43) [POST]
+  Parameters: {"url"=>"blah"}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+
+Rendered rescues/_trace (83.3ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 21:08:31) [POST]
+  Parameters: {"url"=>"blah"}
+
+ActionController::UnknownAction (No action responded to create_new_link. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 21:12:53) [GET]
+
+ActionView::MissingTemplate (Missing template site/create_new_link.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 21:13:27) [POST]
+  Parameters: {"url"=>"google.com"}
+
+ActionView::MissingTemplate (Missing template site/create_new_link.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 21:15:29) [POST]
+  Parameters: {"url"=>"google.com"}
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/site/create_new_link]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 21:15:37) [POST]
+  Parameters: {"url"=>"yahoo.cm"}
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://localhost/site/create_new_link]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 21:15:41) [POST]
+  Parameters: {"url"=>"yahoo.com"}
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://localhost/site/create_new_link]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 21:30:53) [POST]
+  Parameters: {"url"=>"blah.com"}
+
+MemCache::MemCacheError (No connection to server (localhost:11211 DEAD (Errno::ECONNREFUSED: Connection refused - connect(2)), will retry at Sun Mar 29 21:31:23 -0700 2009)):
+  app/controllers/site_controller.rb:8:in `create_new_link'
+
+Rendered rescues/_trace (76.4ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 21:31:20) [POST]
+  Parameters: {"url"=>"blahblahblah.com"}
+Redirected to http://localhost:3000/PPSwZuj
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/site/create_new_link]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-29 21:31:20) [GET]
+
+ActionController::RoutingError (No route matches "/PPSwZuj" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-29 21:34:11) [POST]
+  Parameters: {"url"=>"http://google.com/maps"}
+
+ActionController::RoutingError (No route matches "/site/create_new_link" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 21:34:35) [POST]
+  Parameters: {"url"=>"http://google.com/maps"}
+Redirected to http://localhost:3000/ItjbIhVAndyA2
+Completed in 35ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#redirect_to_link (for 127.0.0.1 at 2009-03-29 21:34:35) [GET]
+  Parameters: {"key"=>"ItjbIhVAndyA2"}
+Redirected to http://google.com/maps
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/ItjbIhVAndyA2]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 21:38:33) [POST]
+  Parameters: {"url"=>"http://google.com/maps"}
+Redirected to http://localhost:3000/show/ZLHYyJ5uEHLmo
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 21:38:33) [GET]
+  Parameters: {"key"=>"ZLHYyJ5uEHLmo"}
+Rendering site/show
+Completed in 38ms (View: 37, DB: 0) | 200 OK [http://localhost/show/ZLHYyJ5uEHLmo]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 21:38:51) [POST]
+  Parameters: {"url"=>"http://google.com/maps"}
+Redirected to http://localhost:3000/show/Lx1u4yG6oOLFz
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 21:38:51) [GET]
+  Parameters: {"key"=>"Lx1u4yG6oOLFz"}
+Rendering site/show
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/show/Lx1u4yG6oOLFz]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 21:39:47) [GET]
+  Parameters: {"key"=>"Lx1u4yG6oOLFz"}
+Rendering site/show
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/show/Lx1u4yG6oOLFz]
+
+
+Processing SiteController#redirect_to_link (for 127.0.0.1 at 2009-03-29 21:39:50) [GET]
+  Parameters: {"key"=>"Lx1u4yG6oOLFz"}
+Redirected to http://google.com/maps
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/Lx1u4yG6oOLFz]
+
+
+Processing SiteController#redirect_to_link (for 127.0.0.1 at 2009-03-29 21:40:12) [GET]
+  Parameters: {"key"=>"Lx1u4yG6oOLFz"}
+Redirected to http://google.com/maps
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/Lx1u4yG6oOLFz]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 21:40:33) [POST]
+  Parameters: {"url"=>"http://google.com/maps"}
+Redirected to http://localhost:3000/show/jCnlQ9kj5LKdY
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 21:40:33) [GET]
+  Parameters: {"key"=>"jCnlQ9kj5LKdY"}
+Rendering site/show
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://localhost/show/jCnlQ9kj5LKdY]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 21:43:03) [GET]
+  Parameters: {"key"=>"jCnlQ9kj5LKdY"}
+Rendering site/show
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/show/jCnlQ9kj5LKdY]
+
+
+Processing SiteController#redirect_to_link (for 127.0.0.1 at 2009-03-29 21:43:41) [GET]
+  Parameters: {"key"=>"jCnlQ9kj5LKdY"}
+Redirected to http://google.com/maps
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/jCnlQ9kj5LKdY]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 21:44:11) [GET]
+  Parameters: {"key"=>"jCnlQ9kj5LKdY"}
+Rendering site/show
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://localhost/show/jCnlQ9kj5LKdY]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 21:46:44) [POST]
+  Parameters: {"url"=>"http://google.com/news"}
+Redirected to http://localhost:3000/show/D3
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 21:46:44) [GET]
+  Parameters: {"key"=>"D3"}
+Rendering site/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.size) on line #6 of app/views/site/show.html.erb:
+3: 	<p>
+4: 		<b><%= @url %></b>
+5: 	</p>
+6: 	has a length of <%= @url.size %> characters and resulted in the following  EqualURL which has a length of <%= "http://equalurl.com/#{@key}".size %>
+7: 	Here is your new url:  <a href="/<%= @key %>" >http://equalurl.com/<%= @key %></a>
+8: </div>
+
+    app/views/site/show.html.erb:6
+
+Rendered rescues/_trace (37.2ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 21:47:35) [POST]
+  Parameters: {"url"=>"http://whitehouse.gov"}
+Redirected to http://localhost:3000/show/F
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 21:47:35) [GET]
+  Parameters: {"key"=>"F"}
+Rendering site/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.size) on line #6 of app/views/site/show.html.erb:
+3: 	<p>
+4: 		<b><%= @url %></b>
+5: 	</p>
+6: 	has a length of <%= @url.size %> characters and resulted in the following  EqualURL which has a length of <%= "http://equalurl.com/#{@key}".size %>
+7: 	Here is your new url:  <a href="/<%= @key %>" >http://equalurl.com/<%= @key %></a>
+8: </div>
+
+    app/views/site/show.html.erb:6
+
+Rendered rescues/_trace (37.2ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 21:48:26) [GET]
+  Parameters: {"key"=>"F"}
+Rendering site/show
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/show/F]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 21:50:21) [GET]
+  Parameters: {"key"=>"F"}
+Rendering site/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/show/F]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 21:50:39) [GET]
+  Parameters: {"key"=>"F"}
+Rendering site/show
+Completed in 59ms (View: 56, DB: 0) | 200 OK [http://localhost/show/F]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 21:51:08) [GET]
+  Parameters: {"key"=>"F"}
+Rendering site/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/show/F]
+
+
+Processing SiteController#redirect_to_link (for 127.0.0.1 at 2009-03-29 21:51:09) [GET]
+  Parameters: {"key"=>"F"}
+Redirected to http://whitehouse.gov
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/F]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 21:51:59) [GET]
+  Parameters: {"key"=>"F"}
+Rendering site/show
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://localhost/show/F]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 21:52:03) [POST]
+  Parameters: {"url"=>"http://whitehouse"}
+
+MemCache::MemCacheError ():
+  app/controllers/site_controller.rb:6:in `create_new_link'
+
+Rendered rescues/_trace (33.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 22:00:11) [POST]
+  Parameters: {"url"=>"tooshort"}
+
+NameError (uninitialized constant SiteController::Error):
+  app/controllers/site_controller.rb:11:in `create_new_link'
+
+Rendered rescues/_trace (70.7ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 22:00:25) [POST]
+  Parameters: {"url"=>"short"}
+Redirected to http://localhost:3000/too_short?attempted_url=short
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#redirect_to_link (for 127.0.0.1 at 2009-03-29 22:00:25) [GET]
+  Parameters: {"key"=>"too_short", "attempted_url"=>"short"}
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/site_controller.rb:18:in `redirect_to_link'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 22:01:54) [POST]
+  Parameters: {"url"=>"booboo"}
+Redirected to http://localhost:3000/too_short?attempted_url=booboo
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#too_short (for 127.0.0.1 at 2009-03-29 22:01:54) [GET]
+  Parameters: {"attempted_url"=>"booboo"}
+Rendering site/too_short
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::SITE_URL) on line #2 of app/views/site/too_short.html.erb:
+1: <div>
+2: 	You tried <%= @attempted_url %>.  That's too short.  Minimum length is <%= SITE_URL.size + 1 %>
+3: </div>
+
+    app/views/site/too_short.html.erb:2
+
+Rendered rescues/_trace (40.3ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#too_short (for 127.0.0.1 at 2009-03-29 22:02:11) [GET]
+  Parameters: {"attempted_url"=>"booboo"}
+Rendering site/too_short
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/too_short?attempted_url=booboo]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 22:03:09) [POST]
+  Parameters: {"url"=>"http://www.google.com/maps"}
+Redirected to http://localhost:3000/show/L180OC
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 22:03:09) [GET]
+  Parameters: {"key"=>"L180OC"}
+Rendering site/show
+Completed in 100ms (View: 97, DB: 0) | 200 OK [http://localhost/show/L180OC]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 22:03:54) [GET]
+  Parameters: {"key"=>"L180OC"}
+Rendering site/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/show/L180OC]
+
+
+Processing SiteController#redirect_to_link (for 127.0.0.1 at 2009-03-29 22:04:00) [GET]
+  Parameters: {"key"=>"L180OC"}
+Redirected to http://www.google.com/maps
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/L180OC]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 22:04:10) [POST]
+  Parameters: {"url"=>"short"}
+Redirected to http://localhost:3000/too_short?attempted_url=short
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#too_short (for 127.0.0.1 at 2009-03-29 22:04:10) [GET]
+  Parameters: {"attempted_url"=>"short"}
+Rendering site/too_short
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://localhost/too_short?attempted_url=short]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 22:04:17) [POST]
+  Parameters: {"url"=>"sibblingz.com"}
+Redirected to http://localhost:3000/too_short?attempted_url=sibblingz.com
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#too_short (for 127.0.0.1 at 2009-03-29 22:04:17) [GET]
+  Parameters: {"attempted_url"=>"sibblingz.com"}
+Rendering site/too_short
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/too_short?attempted_url=sibblingz.com]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 22:04:22) [POST]
+  Parameters: {"url"=>"http://sibblingz.com"}
+Redirected to http://localhost:3000/too_short?attempted_url=http://sibblingz.com
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#too_short (for 127.0.0.1 at 2009-03-29 22:04:22) [GET]
+  Parameters: {"attempted_url"=>"http://sibblingz.com"}
+Rendering site/too_short
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/too_short?attempted_url=http://sibblingz.com]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 22:04:26) [POST]
+  Parameters: {"url"=>"http://www.sibblingz.com"}
+Redirected to http://localhost:3000/show/RSZU
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 22:04:26) [GET]
+  Parameters: {"key"=>"RSZU"}
+Rendering site/show
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://localhost/show/RSZU]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 22:05:36) [POST]
+  Parameters: {"url"=>"<div>HAHA</div>"}
+Redirected to http://localhost:3000/too_short?attempted_url=<div>HAHA</div>
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#too_short (for 127.0.0.1 at 2009-03-29 22:05:36) [GET]
+  Parameters: {"attempted_url"=>"<div>HAHA</div>"}
+Rendering site/too_short
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/too_short?attempted_url=%3Cdiv%3EHAHA%3C/div%3E]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 22:06:29) [POST]
+  Parameters: {"url"=>"<strong>HAHA</strong>"}
+Redirected to http://localhost:3000/show/c
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 22:06:29) [GET]
+  Parameters: {"key"=>"c"}
+Rendering site/show
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/show/c]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 22:06:41) [POST]
+  Parameters: {"url"=>"<strong id=\"poop\">HAHA</strong>"}
+Redirected to http://localhost:3000/show/T2frpidzF0s
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#show (for 127.0.0.1 at 2009-03-29 22:06:41) [GET]
+  Parameters: {"key"=>"T2frpidzF0s"}
+Rendering site/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/show/T2frpidzF0s]
+
+
+Processing SiteController#create_new_link (for 127.0.0.1 at 2009-03-29 22:07:20) [POST]
+  Parameters: {"url"=>"<a href=\"/../\"/>"}
+Redirected to http://localhost:3000/too_short?attempted_url=<a href="/../"/>
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/new_link]
+
+
+Processing SiteController#too_short (for 127.0.0.1 at 2009-03-29 22:07:20) [GET]
+  Parameters: {"attempted_url"=>"<a href=\"/../\"/>"}
+Rendering site/too_short
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/too_short?attempted_url=%3Ca%20href=%22/../%22/%3E]
