@@ -37,12 +37,6 @@ html, body, div, a{
 	margin-top: 36px;
 	padding-left: 1px;
 }
-#content h3{
-	padding-bottom: 17px;
-}
-#content p{
-	font-size: 80%;
-}
 #new_url_box{
 	background-color: #e7e7f7;
 	width: 325px;
