@@ -25,8 +25,11 @@ class SiteController < ApplicationController
   
   def redirect_to_link
     @key = params[:key]
-    @real_url = CGI::unescape(  CACHE.get(@key)  )
-    if @real_url
+    puts @key
+    @un_escaped_real_url = CACHE.get(@key)
+    puts @un_escaped_real_url
+    if @un_escaped_real_url
+      @real_url = CGI::unescape( @un_escaped_real_url )
       redirect_to @real_url
     else
       redirect_to "/not_found?key=#{@key}"
@@ -35,8 +38,12 @@ class SiteController < ApplicationController
   
   def show
     @key = params[:key]
-    @real_url = CGI::unescape( CACHE.get(params[:key])  )
-    redirect_to "/not_found?key=#{@key}" unless @real_url
+    @un_escaped_real_url = CACHE.get(params[:key])
+    if @un_escaped_real_url
+      @real_url = CGI::unescape(@un_escaped_real_url)
+    else
+      redirect_to "/not_found?key=#{@key}"
+    end
   end
   
   def too_short
