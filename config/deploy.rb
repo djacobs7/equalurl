@@ -11,6 +11,7 @@ set :deploy_to, "/home/deploy/#{application}"
 set :scm, :none
 set :deploy_via, :copy
 set :user, "deploy"
+set :copy_exclude, [".git", ".gitignore"]
 
 role :app, "ds414-ubun1.blueboxgrid.com"
 role :web, "ds414-ubun1.blueboxgrid.com"
