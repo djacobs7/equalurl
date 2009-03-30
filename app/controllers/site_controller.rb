@@ -21,7 +21,7 @@ class SiteController < ApplicationController
   
   def redirect_to_link
     @key = params[:key]
-    @real_url = CACHE.get(@key)
+    @real_url = CGI::unescape(  CACHE.get(@key)  )
     if @real_url
       redirect_to @real_url
     else
@@ -31,7 +31,7 @@ class SiteController < ApplicationController
   
   def show
     @key = params[:key]
-    @real_url = CACHE.get(params[:key])
+    @real_url = CGI::unescape( CACHE.get(params[:key])  )
     redirect_to "/not_found?key=#{@key}" unless @real_url
   end
   
