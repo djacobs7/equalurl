@@ -18,17 +18,27 @@ class SiteController < ApplicationController
   end
   
   def redirect_to_link
-    url = CACHE.get(params[:key])
-    redirect_to url
+    @key = params[:key]
+    @real_url = CACHE.get(@key)
+    if @real_url
+      redirect_to @real_url
+    else
+      redirect_to "/not_found?key=#{@key}"
+    end
   end
   
   def show
     @key = params[:key]
     @real_url = CACHE.get(params[:key])
+    redirect_to "/not_found?key=#{@key}" unless @real_url
   end
   
   def too_short
     @attempted_url = params[:attempted_url]
+  end
+  
+  def not_found
+    @key = params[:key]
   end
   
   private
