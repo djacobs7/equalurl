@@ -52,9 +52,15 @@ class SiteController < ApplicationController
       end
       
       characters = ('a'..'z').to_a + ('A'..'Z').to_a + ('0'..'9').to_a
-      random_string = ''
-      1.upto(url.size - SITE_URL.size) do
-        random_string << characters.rand
+      
+      while true
+        random_string = ''
+        1.upto(url.size - SITE_URL.size) do
+          random_string << characters.rand
+        end
+        
+        break if !CACHE.get(random_string)
+        logger.debug "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~I just had a collision with #{random_string}, which already existed as it turns out...~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       end
       
       CACHE.set( random_string, url )
