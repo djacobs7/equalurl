@@ -4,6 +4,7 @@ class SiteController < ApplicationController
   
   def create_new_link
     url = params[:url]
+    url = formalize_url(url)
     begin
       random_string = generate_url(url)
       CACHE.set( random_string, url )
@@ -28,6 +29,15 @@ class SiteController < ApplicationController
   end
   
   private
+  
+    def formalize_url(url)
+      url.strip!
+      if /^http:\/\//.match(url)
+        return url
+      else
+        return "http://#{url}"
+      end
+    end
   
     def generate_url(url)
       raise 'too short' if url.size < (SITE_URL.size + 1)
