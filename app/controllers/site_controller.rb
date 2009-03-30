@@ -1,9 +1,11 @@
 class SiteController < ApplicationController
   
+  require 'cgi'
+  
   SITE_URL = 'http://equalurl.com/'
   
   def create_new_link
-    url = params[:url]
+    url = (params[:url])
     url = formalize_url(url)
     if url.size < (SITE_URL.size + 1)
       url = url_with_www(url)
@@ -19,7 +21,7 @@ class SiteController < ApplicationController
   
   def redirect_to_link
     @key = params[:key]
-    @real_url = CACHE.get(@key)
+    @real_url = CGI::unescape(  CACHE.get(@key)  )
     if @real_url
       redirect_to @real_url
     else
@@ -29,7 +31,7 @@ class SiteController < ApplicationController
   
   def show
     @key = params[:key]
-    @real_url = CACHE.get(params[:key])
+    @real_url = CGI::unescape( CACHE.get(params[:key])  )
     redirect_to "/not_found?key=#{@key}" unless @real_url
   end
   
@@ -55,26 +57,30 @@ class SiteController < ApplicationController
     def generate_url(url)
       raise 'too short' if url.size < (SITE_URL.size + 1)
       
-      existing_key = CACHE.get("existing_link_#{url}")
+      existing_key = CACHE.get( CGI::escape( "existing_link_#{url}") )
       if existing_key
-        CACHE.set( existing_key, url )
+        CACHE.set( existing_key, CGI::escape(url) )
         return existing_key
       end
       
       characters = ('a'..'z').to_a + ('A'..'Z').to_a + ('0'..'9').to_a
       
+      give_up_counter = 0 
       while true
         random_string = ''
         1.upto(url.size - SITE_URL.size) do
           random_string << characters.rand
         end
+        give_up_counter = give_up_counter + 1
         
+        raise 'too short' if give_up_counter > 200    #after 200 tries,  assume you will never find something that is not a collision
         break if !CACHE.get(random_string)
         logger.debug "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~I just had a collision with #{random_string}, which already existed as it turns out...~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       end
       
-      CACHE.set( random_string, url )
-      CACHE.set( "existing_link_#{url}", random_string )
+      
+      CACHE.set( random_string, CGI::escape(url) )
+      CACHE.set( CGI::escape( "existing_link_#{url}" ), random_string )
       random_string
     end
     
